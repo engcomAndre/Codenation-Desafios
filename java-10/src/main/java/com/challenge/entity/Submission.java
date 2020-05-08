@@ -30,4 +30,7 @@ public class Submission {
     @CreatedDate
     private LocalDateTime createdAt;
 
+    public Float getScore() {
+        return score;
+    }
 }

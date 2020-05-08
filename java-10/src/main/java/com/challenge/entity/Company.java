@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -40,63 +39,4 @@ public class Company {
     @CreatedDate
     private LocalDateTime createdAt;
 
-    public Company(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 50) String slug, List<Candidate> candidates, LocalDateTime createdAt) {
-        this.name = name;
-        this.slug = slug;
-        this.candidates = candidates;
-        this.createdAt = createdAt;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSlug() {
-        return slug;
-    }
-
-    public void setSlug(String slug) {
-        this.slug = slug;
-    }
-
-    public List<Candidate> getCandidates() {
-        return candidates;
-    }
-
-    public void setCandidates(List<Candidate> candidates) {
-        this.candidates = candidates;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Company)) return false;
-        Company company = (Company) o;
-        return getId().equals(company.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
 }

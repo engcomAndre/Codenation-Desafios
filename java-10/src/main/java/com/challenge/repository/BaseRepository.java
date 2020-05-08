@@ -9,4 +9,5 @@ import java.io.Serializable;
 @NoRepositoryBean
 public interface BaseRepository<T, ID extends Serializable> extends Repository<T, ID>, JpaRepository<T, ID> {
 
+
 }

@@ -2,24 +2,23 @@ package com.challenge.repository;
 
 import com.challenge.entity.Candidate;
 import com.challenge.entity.CandidateId;
+import com.challenge.repository.querys.CandidateQuerys;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CandidateRepository extends BaseRepository<Candidate, Long> {
+public interface CandidateRepository extends BaseRepository<Candidate, CandidateId> {
 
-    Optional<Candidate> findById(CandidateId candidateId);
+    //Using SQL Querys
+    @Query(value = CandidateQuerys.SELECT.FIND_BY_USER_COMPANY_ID_ACCELERATION_ID, nativeQuery = true)
+    Optional<Candidate> findByUserIdCompanyIdAccelerationId(@Param(value = "userId") Long userId, @Param(value = "companyId") Long companyId, @Param(value = "accelerationId") Long accelerationId);
 
-//    @Query(value = "select * from candidate where acceleration_id = :accelerationId")
-//    List<Candidate> findByAccelerationId(@Param("id") Long accelerationId);
-//
-////    Optional<Candidate> findByUserIdCompanyIdAccelerationId(Long userId, Long companyId, Long accelerationId);
+    //Using a Expressions Properties in JPQL
+    List<Candidate> findById_Company_Id(Long companyId);
 
-
-//    Optional<Candidate> findBy(Long userId, Long companyId, Long accelerationId);
+    List<Candidate> findById_Acceleration_Id(Long accelerationId);
 }

@@ -17,12 +17,14 @@ public class SubmissionService implements SubmissionServiceInterface {
 
     @Override
     public BigDecimal findHigherScoreByChallengeId(Long challengeId) {
-        return submissionRepository.findHigherScoreByChallengeId(challengeId);
+        Submission submission = submissionRepository.findFirstScoreById_Challenge_IdOrderByScoreDesc(challengeId).orElse(null);
+
+        return submission != null ? BigDecimal.valueOf(submission.getScore()) : BigDecimal.ZERO;
     }
 
     @Override
     public List<Submission> findByChallengeIdAndAccelerationId(Long challengeId, Long accelerationId) {
-        return submissionRepository.findByChallengeIdAndAccelerationId(challengeId,accelerationId);
+        return submissionRepository.findByChallengeIdAndAccelerationId(challengeId, accelerationId);
     }
 
     @Override

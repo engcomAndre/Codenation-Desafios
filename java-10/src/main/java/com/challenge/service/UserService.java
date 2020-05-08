@@ -6,6 +6,7 @@ import com.challenge.service.interfaces.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,17 +23,17 @@ public class UserService implements UserServiceInterface {
 
     @Override
     public List<User> findByAccelerationName(String name) {
-        return userRepository.findByAccelerationName(name);
+        return userRepository.findByCandidates_Id_Acceleration_Name(name);
     }
 
     @Override
     public List<User> findByCompanyId(Long companyId) {
-        return userRepository.findByCompanyId(companyId);
+        return userRepository.findByCandidates_Id_Company_Id(companyId);
     }
 
     @Override
     public User save(User user) {
+        user.setCreatedAt(LocalDateTime.now());
         return userRepository.save(user);
     }
-
 }

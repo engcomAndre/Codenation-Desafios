@@ -2,8 +2,10 @@ package com.challenge.service;
 
 import com.challenge.entity.Candidate;
 import com.challenge.entity.CandidateId;
+import com.challenge.entity.User;
 import com.challenge.repository.CandidateRepository;
 import com.challenge.service.interfaces.CandidateServiceInterface;
+import org.hibernate.usertype.UserVersionType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,18 +25,17 @@ public class CandidateService implements CandidateServiceInterface {
 
     @Override
     public Optional<Candidate> findById(Long userId, Long companyId, Long accelerationId) {
-//        return candidateRepository.findByUserIdCompanyIdAccelerationId(userId,companyId,accelerationId);
-        return null;
+        return candidateRepository.findByUserIdCompanyIdAccelerationId(userId,companyId,accelerationId);
     }
 
     @Override
     public List<Candidate> findByCompanyId(Long companyId) {
-        return null;
+        return candidateRepository.findById_Company_Id(companyId);
     }
 
     @Override
     public List<Candidate> findByAccelerationId(Long accelerationId) {
-        return null;
+        return candidateRepository.findById_Acceleration_Id(accelerationId);
     }
 
     @Override

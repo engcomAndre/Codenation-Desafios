@@ -11,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
@@ -23,9 +22,8 @@ public class UserServiceTests {
 
     @Test
     public void findByIdTest() {
-        Long user = userService.findById(1L).orElse(null).getId();
+        User user = userService.findById(1L).orElse(null);
         assertNotNull(user);
-        assertEquals(1L, user.longValue());
     }
 
     @Test
@@ -39,5 +37,6 @@ public class UserServiceTests {
         List<User> users = userService.findByCompanyId(2L);
         assertNotNull(users);
     }
+
 
 }

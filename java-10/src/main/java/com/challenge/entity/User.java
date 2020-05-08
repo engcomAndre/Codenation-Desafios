@@ -12,7 +12,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @AllArgsConstructor
@@ -56,91 +55,4 @@ public class User {
 
     @OneToMany(mappedBy = "id.user")
     private List<Submission> submissions;
-
-    public User(@NotNull @Size(max = 100) String fullName, @Email @Size(max = 100) @NotNull String email, @NotNull @Size(max = 50) String nickname, @NotNull @Size(max = 255) String password, LocalDateTime createdAt, List<Candidate> candidates, List<Submission> submissions) {
-        this.fullName = fullName;
-        this.email = email;
-        this.nickname = nickname;
-        this.password = password;
-        this.createdAt = createdAt;
-        this.candidates = candidates;
-        this.submissions = submissions;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User)) return false;
-        User user = (User) o;
-        return getId().equals(user.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
-    //    public List<Candidate> getCandidates() {
-//        return candidates;
-//    }
-//
-//    public void setCandidates(List<Candidate> candidates) {
-//        this.candidates = candidates;
-//    }
-//
-//    public List<Submission> getSubmissions() {
-//        return submissions;
-//    }
-//
-//    public void setSubmissions(List<Submission> submissions) {
-//        this.submissions = submissions;
-//    }
 }

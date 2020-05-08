@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Data
-//@AllArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
 @EntityListeners(AuditingEntityListener.class)
@@ -26,33 +26,4 @@ public class CandidateId implements Serializable {
     @ManyToOne
     private Company company;
 
-    public CandidateId(User user, Acceleration acceleration, Company company) {
-        this.user = user;
-        this.acceleration = acceleration;
-        this.company = company;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Acceleration getAcceleration() {
-        return acceleration;
-    }
-
-    public void setAcceleration(Acceleration acceleration) {
-        this.acceleration = acceleration;
-    }
-
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 }

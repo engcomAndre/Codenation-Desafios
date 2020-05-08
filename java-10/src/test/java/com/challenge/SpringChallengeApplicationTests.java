@@ -23,11 +23,6 @@ public class SpringChallengeApplicationTests {
 
     }
 
-    @Test
-    public void findByIdTest() {
-        User user = userService.findById(1L).orElse(null);
-        assertNotNull(user);
-    }
 
 
 }

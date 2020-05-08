@@ -16,7 +16,7 @@ public class ChallengeService implements ChallengeServiceInterface {
 
     @Override
     public List<Challenge> findByAccelerationIdAndUserId(Long accelerationId, Long userId) {
-        return challengeRepository.findByAccelerationIdAndUserId(accelerationId, userId);
+        return challengeRepository.findByAccelerations_Candidates_Id_Acceleration_IdAndAccelerations_Candidates_Id_User_Id(accelerationId, userId);
     }
 
     @Override

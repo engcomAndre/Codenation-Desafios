@@ -22,12 +22,12 @@ public class CompanyService implements CompanyServiceInterface {
 
     @Override
     public List<Company> findByAccelerationId(Long accelerationId) {
-        return companyRepository.findByAccelerationId(accelerationId);
+        return companyRepository.findDistinctByCandidates_Id_Acceleration_Id(accelerationId);
     }
 
     @Override
     public List<Company> findByUserId(Long userId) {
-        return companyRepository.findByUserId(userId);
+        return companyRepository.findDistinctByCandidates_Id_User_Id(userId);
     }
 
     @Override

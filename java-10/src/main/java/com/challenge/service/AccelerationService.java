@@ -27,8 +27,7 @@ public class AccelerationService implements AccelerationServiceInterface {
 
     @Override
     public List<Acceleration> findByCompanyId(Long companyId) {
-        return accelerationRepository.findCompanyById(companyId);
-
+        return accelerationRepository.findByCandidates_Id_Company_Id(companyId);
     }
 
     @Override
