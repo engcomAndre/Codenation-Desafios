@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.codenation.desafioexe.DesafioApplicationTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-04-30T13:19:46" hostname="CM145" time="12406.076">
+  <properties/>
+  <testcase name="fibonnacci5Equals5" classname="br.com.codenation.desafioexe.DesafioApplicationTest" time="12406.076">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

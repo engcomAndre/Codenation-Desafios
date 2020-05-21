@@ -62,4 +62,11 @@ public class User {
     @JsonIgnore
     @OneToMany(mappedBy = "id.user")
     private List<Submission> submissions;
+
+    public User(@NotNull @Size(max = 100) String fullName, @Email @Size(max = 100) @NotNull String email, @NotNull @Size(max = 50) String nickname, @NotNull @Size(max = 255) String password) {
+        this.fullName = fullName;
+        this.email = email;
+        this.nickname = nickname;
+        this.password = password;
+    }
 }

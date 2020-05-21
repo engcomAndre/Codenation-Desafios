@@ -1,0 +1,146 @@
+2020-05-21 16:28:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS VALUES (ID ,CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES[*]
+(NULL,'2020-01-01','user001@gmail.com','user01','username001','123456') "; SQL statement:
+INSERT INTO USERS VALUES (ID ,CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+(null,'2020-01-01','user001@gmail.com','user01','username001','123456') [42000-199]
+2020-05-21 16:28:56 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS VALUES (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES[*]
+('2020-01-01','user001@gmail.com','user01','username001','123456')"; SQL statement:
+INSERT INTO USERS VALUES (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user001@gmail.com','user01','username001','123456') [42000-199]
+2020-05-21 16:34:35 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user001@gmail.com','user01','username001','123456'),
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-01','user003@gmail.com','user03','username003','123456'), 
+('2020-01-01','user004@gmail.com','user04','username004','123456'),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user001@gmail.com','user01','username001','123456'),
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-01','user003@gmail.com','user03','username003','123456'), 
+('2020-01-01','user004@gmail.com','user04','username004','123456'), [42001-199]
+2020-05-21 16:34:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-01','user003@gmail.com','user03','username003','123456'), 
+('2020-01-01','user004@gmail.com','user04','username004','123456'),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-01','user003@gmail.com','user03','username003','123456'), 
+('2020-01-01','user004@gmail.com','user04','username004','123456'), [42001-199]
+2020-05-21 16:36:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user001@gmail.com','user01','username001','123456'), 
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-02','user003@gmail.com','user03','username003','741852'), 
+([*]'2020-0"; SQL statement:
+INSERT INTO USERS (CREATED_AT ,EMAIL ,FULL_NAME ,NICKNAME ,PASSWORD )
+VALUES
+('2020-01-01','user001@gmail.com','user01','username001','123456'), 
+('2020-01-01','user002@gmail.com','user02','username002','123456'), 
+('2020-01-02','user003@gmail.com','user03','username003','741852'), 
+('2020-0 [42000-199]
+2020-05-21 17:00:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "COMPANY[*]"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+COMPANY [42001-199]
+2020-05-21 17:03:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70,1,1), 
+('2020-01-01',70,1,1),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70,1,1), 
+('2020-01-01',70,1,1), [42001-199]
+2020-05-21 17:04:05 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70,1,1), 
+('2020-01-01',70,1,2),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70,1,1), 
+('2020-01-01',70,1,2), [42001-199]
+2020-05-21 17:05:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70.0,1,1), 
+('2020-01-01',70.0,1,2),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70.0,1,1), 
+('2020-01-01',70.0,1,2), [42001-199]
+2020-05-21 17:05:38 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70.0,1,1), 
+('2020-01-01',70.0,1,2)
+([*]'2020-01-01',70.0,1,3)
+('2020-01-01',70.0,1,4)"; SQL statement:
+INSERT INTO SUBMISSION (CREATED_AT ,SCORE ,USER_ID ,CHALLENGE_ID )
+VALUES
+('2020-01-01',70.0,1,1), 
+('2020-01-01',70.0,1,2)
+('2020-01-01',70.0,1,3)
+('2020-01-01',70.0,1,4) [42000-199]
+2020-05-21 17:08:56 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID )
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration001','accelerationSlug001',2), 
+('2020-01-01','acceleration001','accelerationSlug001',3),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID )
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration001','accelerationSlug001',2), 
+('2020-01-01','acceleration001','accelerationSlug001',3), [42001-199]
+2020-05-21 17:09:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID )
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration001','accelerationSlug001',2), 
+('2020-01-01','acceleration001','accelerationSlug001',3),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID )
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration001','accelerationSlug001',2), 
+('2020-01-01','acceleration001','accelerationSlug001',3), [42001-199]
+2020-05-21 17:09:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CHALLENGE_ID" not found; SQL statement:
+select * from CHALLENGE_ID [42102-199]
+2020-05-21 17:10:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID)
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration002','accelerationSlug002',2), 
+('2020-01-01','acceleration003','accelerationSlug003',3),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO ACCELERATION (CREATED_AT ,NAME ,SLUG ,CHALLENGE_ID)
+VALUES
+('2020-01-01','acceleration001','accelerationSlug001',1), 
+('2020-01-01','acceleration002','accelerationSlug002',2), 
+('2020-01-01','acceleration003','accelerationSlug003',3), [42001-199]
+2020-05-21 17:11:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CANDIDATE (CREATED_AT ,STATUS ,USER_ID ,COMPANY_ID, ACCELERATION_ID )
+VALUES
+('2020-01-01',1,1,1,1),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS"; SQL statement:
+INSERT INTO CANDIDATE (CREATED_AT ,STATUS ,USER_ID ,COMPANY_ID, ACCELERATION_ID )
+VALUES
+('2020-01-01',1,1,1,1), [42001-199]
+2020-05-21 17:13:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ACCELERATION[*]"; expected "ALTER, ANALYZE"; SQL statement:
+ACCELERATION [42001-199]
+2020-05-21 18:24:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CANDIDATE[*]"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+CANDIDATE [42001-199]
+2020-05-21 18:24:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ACCELERATION[*]"; expected "ALTER, ANALYZE"; SQL statement:
+ACCELERATION [42001-199]
