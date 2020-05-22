@@ -5,6 +5,7 @@ import com.challenge.endpoints.interfaces.SubmissionControllerInterface;
 import com.challenge.entity.Submission;
 import com.challenge.mappers.SubmissionMapper;
 import com.challenge.service.impl.SubmissionService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,15 +17,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+@AllArgsConstructor
 @RestController
 @RequestMapping(value = "/submission")
 public class SubmissionController implements SubmissionControllerInterface {
 
-    @Autowired
     private SubmissionService submissionService;
 
-    @Autowired
     private SubmissionMapper submissionMapper;
 
     @GetMapping
@@ -32,9 +31,8 @@ public class SubmissionController implements SubmissionControllerInterface {
     public ResponseEntity<Set<SubmissionDTO>> findByChallengeIdAndAccelerationId(
             @RequestParam(value = "challengeId", required = true, defaultValue = "0") Long challengeId,
             @RequestParam(value = "accelerationId", required = true, defaultValue = "0") Long accelerationId) {
-        List<Submission> submissions = new ArrayList<>();
 
-        submissions.addAll(submissionService.findByChallengeIdAndAccelerationId(challengeId, accelerationId));
+        List<Submission> submissions = new ArrayList<>(submissionService.findByChallengeIdAndAccelerationId(challengeId, accelerationId));
 
         return ResponseEntity.ok().body(new HashSet<>(submissionMapper.map(submissions)));
 

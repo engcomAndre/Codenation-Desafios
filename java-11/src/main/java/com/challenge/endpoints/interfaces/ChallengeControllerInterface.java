@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface ChallengeControllerInterface {
 
-    List<Challenge> findByAccelerationIdAndUserId(Long accelerationId, Long userId);
+    ResponseEntity<List<Challenge>> findByAccelerationIdAndUserId(Long accelerationId, Long userId);
 
 }

@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class ChallengeService implements ChallengeServiceInterface {
 
+
     private ChallengeRepository repository;
 
     @Override
