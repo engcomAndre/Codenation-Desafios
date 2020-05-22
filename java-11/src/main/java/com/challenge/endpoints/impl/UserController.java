@@ -31,8 +31,8 @@ public class UserController implements UserControllerInterface {
             @RequestParam(value = "accelerationName", required = false, defaultValue = "") String accelerationName) {
 
         Set<User> users = new HashSet<>();
-        users.addAll(userService.findByCompanyId(companyId));
-        users.addAll(userService.findByAccelerationName(accelerationName));
+        if (companyId != 0) users.addAll(userService.findByCompanyId(companyId));
+        if (!accelerationName.isEmpty()) users.addAll(userService.findByAccelerationName(accelerationName));
         return ResponseEntity.ok().body(users);
     }
 }

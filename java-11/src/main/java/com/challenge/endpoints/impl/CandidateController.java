@@ -44,8 +44,8 @@ public class CandidateController implements CandidateControllerInterface {
             @RequestParam(value = "accelerationId", required = false, defaultValue = "0") Long accelerationId) {
         List<Candidate> candidates = new ArrayList<>();
 
-        candidates.addAll(candidateService.findByCompanyId(companyId));
-        candidates.addAll(candidateService.findByAccelerationId(accelerationId));
+        if (companyId != 0) candidates.addAll(candidateService.findByCompanyId(companyId));
+        if (accelerationId != 0) candidates.addAll(candidateService.findByAccelerationId(accelerationId));
 
         return ResponseEntity.ok().body(new HashSet<>(candidateMapper.map(candidates)));
     }

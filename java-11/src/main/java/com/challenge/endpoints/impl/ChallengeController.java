@@ -19,8 +19,8 @@ public class ChallengeController implements ChallengeControllerInterface {
 
     private ChallengeService challengeService;
 
-    @GetMapping
     @Override
+    @GetMapping
     public ResponseEntity<List<Challenge>> findByAccelerationIdAndUserId(
             @RequestParam(value = "accelerationId", required = false) Long accelerationId,
             @RequestParam(value = "userId", required = false) Long userId) {

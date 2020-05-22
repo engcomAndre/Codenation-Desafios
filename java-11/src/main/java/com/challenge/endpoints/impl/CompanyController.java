@@ -5,7 +5,6 @@ import com.challenge.entity.Company;
 import com.challenge.exception.ResourceNotFoundException;
 import com.challenge.service.impl.CompanyService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,8 +37,8 @@ public class CompanyController implements CompanyControllerInterface {
 
         Set<Company> companies = new HashSet<>();
 
-        companies.addAll(companyService.findByUserId(userId));
-        companies.addAll(companyService.findByAccelerationId(accelerationId));
+        if (userId != 0) companies.addAll(companyService.findByUserId(userId));
+        if (accelerationId != 0) companies.addAll(companyService.findByAccelerationId(accelerationId));
 
         return ResponseEntity.ok().body(companies);
     }
