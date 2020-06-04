@@ -20,7 +20,9 @@ public class Order {
         return paymentMethod;
     }
 
-    public Double calculate() {
-        return paymentMethod.getPaymentStrategy().calculate(this.price);
+    public Double getStrategyPrice() {
+        return this.paymentMethod.getPaymentStrategy().calculate(this.price);
     }
+
+
 }

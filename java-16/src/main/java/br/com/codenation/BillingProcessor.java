@@ -3,7 +3,6 @@ package br.com.codenation;
 public class BillingProcessor {
 
     public Double calculate(Order order) {
-        return order.calculate();
-
+        return order.getStrategyPrice();
     }
 }
