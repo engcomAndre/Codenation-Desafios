@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42306cbe-7249-4512-bc9b-3a47ce705efd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-11/data/test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../java-11/data/test.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-11/src/main/java/com/challenge/endpoints/impl/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-11/src/main/java/com/challenge/endpoints/impl/CandidateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-11/stdout.txt" beforeDir="false" />
@@ -11,45 +10,11 @@
       <change beforePath="$PROJECT_DIR$/../java-12/src/test/java/com/challenge/suite/Oauth2Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-12/src/test/resources/pre-sql.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-12/stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../java-12/stdout.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/BillingProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/BillingProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/OrderCash.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/OrderCreditCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/OrderDebitCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/OrderTransfer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/PaymentMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/com/codenation/paymentmethods/PaymentMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.codenation.BillingProcessorTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/br.com.codenation.BillingProcessorTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.codenation.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/br.com.codenation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.codenation.BillingProcessorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-br.com.codenation.BillingProcessorTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/BillingProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/BillingProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/OrderCash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/Cash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/OrderCreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/CreditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/OrderDebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/DebitCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/OrderTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/paymentmethods/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stdout.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-5/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../java-5/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591281926374</updated>
-      <workItem from="1591281964312" duration="2021000" />
+      <workItem from="1591281964312" duration="3217000" />
     </task>
     <servers />
   </component>
