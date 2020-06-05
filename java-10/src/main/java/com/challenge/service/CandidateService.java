@@ -2,21 +2,22 @@ package com.challenge.service;
 
 import com.challenge.entity.Candidate;
 import com.challenge.entity.CandidateId;
-import com.challenge.entity.User;
 import com.challenge.repository.CandidateRepository;
 import com.challenge.service.interfaces.CandidateServiceInterface;
-import org.hibernate.usertype.UserVersionType;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class CandidateService implements CandidateServiceInterface {
 
-    @Autowired
-    private CandidateRepository candidateRepository;
+    private final CandidateRepository candidateRepository;
+
+    public CandidateService(CandidateRepository candidateRepository) {
+        this.candidateRepository = candidateRepository;
+    }
 
     @Override
     public Optional<Candidate> findById(CandidateId id) {
@@ -25,7 +26,7 @@ public class CandidateService implements CandidateServiceInterface {
 
     @Override
     public Optional<Candidate> findById(Long userId, Long companyId, Long accelerationId) {
-        return candidateRepository.findByUserIdCompanyIdAccelerationId(userId,companyId,accelerationId);
+        return candidateRepository.findByUserIdCompanyIdAccelerationId(userId, companyId, accelerationId);
     }
 
     @Override

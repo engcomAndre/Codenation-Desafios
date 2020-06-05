@@ -15,7 +15,7 @@ public interface AccelerationRepository extends BaseRepository<Acceleration, Lon
     Optional<Acceleration> findByName(String name);
 
     //Using SQL Querys
-    @Query(value = AccelerationQuerys.SELECT.FIND_COMPANY_BY_ID, nativeQuery = true)
+    @Query(value = AccelerationQuerys.SELECT.BY_COMPANY_ID_AND_ACCLERATION_ID, nativeQuery = true)
     List<Acceleration> findCompanyById(@Param(value = "companyId") Long companyId);
 
     //Using a Expressions Properties in JPQL

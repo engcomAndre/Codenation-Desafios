@@ -3,17 +3,20 @@ package com.challenge.service;
 import com.challenge.entity.Company;
 import com.challenge.repository.CompanyRepository;
 import com.challenge.service.interfaces.CompanyServiceInterface;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class CompanyService implements CompanyServiceInterface {
 
-    @Autowired
-    private CompanyRepository companyRepository;
+    private final CompanyRepository companyRepository;
+
+    public CompanyService(CompanyRepository companyRepository) {
+        this.companyRepository = companyRepository;
+    }
 
     @Override
     public Optional<Company> findById(Long id) {

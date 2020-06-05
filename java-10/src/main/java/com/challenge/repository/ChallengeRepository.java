@@ -12,11 +12,10 @@ import java.util.List;
 public interface ChallengeRepository extends BaseRepository<Challenge, Long> {
 
     //Using SQL Querys
-    @Query(value = ChallengeQuerys.SELECT.FIND_BY_ACCELERATION_ID_AND_USER_ID, nativeQuery = true)
+    @Query(value = ChallengeQuerys.SELECT.BY_USER_ID_AND_ACCELERATION_ID_AND_CHALLENGE_ID, nativeQuery = true)
     List<Challenge> findByAccelerationIdAndUserId(@Param(value = "accelerationId") Long accelerationId, @Param(value = "userId") Long userId);
 
     //Using a Expressions Properties in JPQL
-    List<Challenge> findByAccelerations_Candidates_Id_Acceleration_IdAndAccelerations_Candidates_Id_User_Id(Long accelerationId,Long userId);
-
+    List<Challenge> findByAccelerations_Candidates_Id_Acceleration_IdAndAccelerations_Candidates_Id_User_Id(Long accelerationId, Long userId);
 
 }

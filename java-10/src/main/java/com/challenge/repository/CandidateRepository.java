@@ -14,7 +14,7 @@ import java.util.Optional;
 public interface CandidateRepository extends BaseRepository<Candidate, CandidateId> {
 
     //Using SQL Querys
-    @Query(value = CandidateQuerys.SELECT.FIND_BY_USER_COMPANY_ID_ACCELERATION_ID, nativeQuery = true)
+    @Query(value = CandidateQuerys.SELECT.BY_USER_ID_AND_COMPANY_ID_AND_ACCELERATION_ID, nativeQuery = true)
     Optional<Candidate> findByUserIdCompanyIdAccelerationId(@Param(value = "userId") Long userId, @Param(value = "companyId") Long companyId, @Param(value = "accelerationId") Long accelerationId);
 
     //Using a Expressions Properties in JPQL

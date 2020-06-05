@@ -12,8 +12,12 @@ import java.util.Optional;
 @Service
 public class AccelerationService implements AccelerationServiceInterface {
 
+    private final AccelerationRepository accelerationRepository;
+
     @Autowired
-    private AccelerationRepository accelerationRepository;
+    public AccelerationService(AccelerationRepository accelerationRepository) {
+        this.accelerationRepository = accelerationRepository;
+    }
 
     @Override
     public Optional<Acceleration> findById(Long id) {

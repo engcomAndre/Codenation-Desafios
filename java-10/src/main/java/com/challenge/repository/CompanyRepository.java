@@ -12,10 +12,10 @@ import java.util.List;
 public interface CompanyRepository extends BaseRepository<Company, Long> {
 
     //Using SQL Querys
-    @Query(value = CompanyQuerys.SELECT.FIND_BY_ACCELERATION_ID, nativeQuery = true)
+    @Query(value = CompanyQuerys.SELECT.BY_ACCELERATION_ID_AND_COMPANY_ID, nativeQuery = true)
     List<Company> findByAccelerationId(@Param(value = "accelerationId") Long accelerationId);
 
-    @Query(value = CompanyQuerys.SELECT.FIND_BY_USER_ID, nativeQuery = true)
+    @Query(value = CompanyQuerys.SELECT.BY_USER_ID, nativeQuery = true)
     List<Company> findByUserId(@Param(value = "userId") Long userId);
 
     //Using a Expressions Properties in JPQL

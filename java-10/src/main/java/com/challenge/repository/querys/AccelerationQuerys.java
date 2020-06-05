@@ -1,8 +1,8 @@
 package com.challenge.repository.querys;
 
-public class AccelerationQuerys {
-    public static class SELECT {
-        public static final String FIND_COMPANY_BY_ID =
+public final class AccelerationQuerys {
+    public static final class SELECT {
+        public static final String BY_COMPANY_ID_AND_ACCLERATION_ID =
                 "SELECT ACC.*\n" +
                         "FROM \n" +
                         "  CANDIDATE C,\n" +

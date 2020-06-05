@@ -13,8 +13,11 @@ import java.util.Optional;
 @Service
 public class UserService implements UserServiceInterface {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public Optional<User> findById(Long userId) {
