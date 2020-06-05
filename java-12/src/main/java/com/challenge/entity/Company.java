@@ -44,9 +44,4 @@ public class Company {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @CreatedDate
     private LocalDateTime createdAt;
-
-    public Company(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 50) String slug) {
-        this.name = name;
-        this.slug = slug;
-    }
 }

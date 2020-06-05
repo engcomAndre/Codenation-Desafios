@@ -68,13 +68,6 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "id.user")
     private List<Submission> submissions;
 
-    public User(String fullName, String email, String nickname, String password) {
-        this.fullName = fullName;
-        this.email = email;
-        this.nickname = nickname;
-        this.password = password;
-    }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(new SimpleGrantedAuthority("ADMIN"));
