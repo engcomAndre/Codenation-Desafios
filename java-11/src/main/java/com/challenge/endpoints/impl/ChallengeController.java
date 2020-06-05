@@ -1,7 +1,8 @@
 package com.challenge.endpoints.impl;
 
+import com.challenge.dto.ChallengeDTO;
 import com.challenge.endpoints.interfaces.ChallengeControllerInterface;
-import com.challenge.entity.Challenge;
+import com.challenge.mappers.ChallengeMapper;
 import com.challenge.service.impl.ChallengeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,12 +20,18 @@ public class ChallengeController implements ChallengeControllerInterface {
 
     private ChallengeService challengeService;
 
+    private ChallengeMapper challengeMapper;
+
     @Override
     @GetMapping
-    public ResponseEntity<List<Challenge>> findByAccelerationIdAndUserId(
+    public ResponseEntity<List<ChallengeDTO>> findByAccelerationIdAndUserId(
             @RequestParam(value = "accelerationId", required = false) Long accelerationId,
             @RequestParam(value = "userId", required = false) Long userId) {
 
-        return ResponseEntity.ok().body(challengeService.findByAccelerationIdAndUserId(accelerationId, userId));
+        return ResponseEntity
+                .ok()
+                .body(challengeMapper
+                        .map(challengeService
+                                .findByAccelerationIdAndUserId(accelerationId, userId)));
     }
 }

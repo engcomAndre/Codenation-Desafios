@@ -1,13 +1,13 @@
 package com.challenge.endpoints.interfaces;
 
-import com.challenge.entity.User;
+import com.challenge.dto.UserDTO;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Set;
+import java.util.List;
 
 public interface UserControllerInterface {
 
-    ResponseEntity<User> findById(Long id);
+    ResponseEntity<UserDTO> findById(Long id);
 
-    ResponseEntity<Set<User>> findByRequestParams(Long companyId, String accelerationName);
+    ResponseEntity<List<UserDTO>> findByRequestParams(Long companyId, String accelerationName);
 }

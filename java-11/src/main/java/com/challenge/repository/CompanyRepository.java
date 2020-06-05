@@ -4,13 +4,13 @@ import com.challenge.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Set;
 
 @Repository
 public interface CompanyRepository extends JpaRepository<Company, Long> {
 
-    List<Company> findDistinctByCandidatesIdAccelerationId(Long accelerationId);
+    Set<Company> findDistinctByCandidatesIdAccelerationId(Long accelerationId);
 
-    List<Company> findByCandidatesIdUserId(Long userId);
+    Set<Company> findByCandidatesIdUserId(Long userId);
 
 }

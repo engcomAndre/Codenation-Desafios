@@ -17,14 +17,18 @@ public class ControllerExceptionHandler extends SimpleMappingExceptionResolver {
 
         String msg = "Valores inválidos na requisição";
 
-        StandardError err = new StandardError(HttpStatus.BAD_REQUEST.value(), System.currentTimeMillis(), msg);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(StandardError
+                        .of(HttpStatus.BAD_REQUEST.value(), System.currentTimeMillis(), msg));
     }
 
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<StandardError> resourceNotFound(ResourceNotFoundException e, HttpServletRequest request) {
-        StandardError err = new StandardError(HttpStatus.NOT_FOUND.value(), System.currentTimeMillis(), e.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(StandardError
+                        .of(HttpStatus.NOT_FOUND.value(), System.currentTimeMillis(), e.getMessage()));
     }
 }

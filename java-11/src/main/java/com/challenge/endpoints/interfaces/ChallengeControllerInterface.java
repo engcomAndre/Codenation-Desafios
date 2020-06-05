@@ -1,13 +1,12 @@
 package com.challenge.endpoints.interfaces;
 
-import com.challenge.entity.Challenge;
-import com.challenge.entity.User;
+import com.challenge.dto.ChallengeDTO;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface ChallengeControllerInterface {
 
-    ResponseEntity<List<Challenge>> findByAccelerationIdAndUserId(Long accelerationId, Long userId);
+    ResponseEntity<List<ChallengeDTO>> findByAccelerationIdAndUserId(Long accelerationId, Long userId);
 
 }

@@ -1,7 +1,14 @@
 package com.challenge.exception;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+
+@Data
+@NoArgsConstructor
 public class StandardError implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -10,35 +17,14 @@ public class StandardError implements Serializable {
     private Long timeStamp;
     private String msg;
 
-    public StandardError(Integer status, Long timeStamp, String msg) {
-        super();
+    private StandardError(Integer status, Long timeStamp, String msg) {
         this.status = status;
         this.timeStamp = timeStamp;
         this.msg = msg;
     }
 
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Long getTimeStamp() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(Long timeStamp) {
-        this.timeStamp = timeStamp;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public static StandardError of(Integer status, Long timeStamp, String msg) {
+        return new StandardError(status,timeStamp,msg);
     }
 
 }
