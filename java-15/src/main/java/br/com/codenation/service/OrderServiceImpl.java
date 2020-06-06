@@ -28,7 +28,7 @@ public class OrderServiceImpl implements OrderService {
                     if (product != null) {
                         return (orderItem.getQuantity()
                                 * product.getValue())
-                                * (product.getIsSale() ? 0.8 : 1);
+                                * (product.getIsSale() ? PERCENT.DISCOUNT_VALUE : PERCENT.NO_DISCOUNT_VALUE);
                     }
                     return 0;
 
@@ -61,11 +61,13 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public Map<Boolean, List<Product>> groupProductsBySale(List<Long> productIds) {
-        Map<Boolean, List<Product>> booleanListMap = findProductsById(productIds).stream()
-                .collect(Collectors.groupingBy(Product::getIsSale));
-
         return findProductsById(productIds).stream()
                 .collect(Collectors.groupingBy(Product::getIsSale));
+    }
+
+    private static final class PERCENT {
+        private static final Double NO_DISCOUNT_VALUE = 1D;
+        private static final Double DISCOUNT_VALUE = NO_DISCOUNT_VALUE - 0.2;
     }
 
 }
